@@ -1,0 +1,407 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+section {
+    flex: 1 0 auto; /* Allow sections to grow and take up available space */
+    padding: 2rem;
+    text-align: justify;
+    margin: 1rem;
+    box-sizing: border-box;
+}
+
+.sections{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns for larger screens */
+    gap: 1rem; /* Add spacing between columns */
+    padding: 1rem;
+}
+
+
+.profile-container{
+    display:flex;
+    align-items:center;
+
+}
+.navigation{
+    flex: 1px;
+    
+    
+}
+
+header {
+    background-color: #000000;
+    padding: 1rem 0;
+    border-bottom: 2px solid white; /* Adds a border below the navigation bar */
+    border-radius: 10px; /* Rounds the corners of the navigation bar */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.993);
+    margin: 0 1rem; /* Adds spacing on the sides */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* home section */
+
+#home {
+    flex: 1 1 100%;
+    padding: 3rem 2rem;
+    color: white;
+    border: none;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-top: 1rem;
+    border:5px solid rgb(5, 1, 1); /* Adds a white border around the image */
+    box-shadow: 0 0 10px rgba(16, 163, 207, 0.945);; /* Adds a shadow effect */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.animated-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 1rem;
+    overflow: hidden;
+    height: 2rem; /* Adjust based on font size */
+    position: relative;
+  
+}
+
+.animated-text span {
+    position: absolute;
+    animation: slide 6s linear infinite;
+    opacity: 0;
+}
+
+.animated-text span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.animated-text span:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.animated-text span:nth-child(3) {
+    animation-delay: 4s;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    10%, 30% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    40% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 0;
+    }
+
+    /* about section */
+}
+
+#about {
+    background-color: #000000; /* Dark blue for About */
+    box-shadow: 0 0 10px rgba(16, 163, 207, 0.945);
+    border-radius: 20px;
+
+}
+
+/* education section */
+
+#education{
+    border: #000000;
+    box-shadow: 0 0 10px rgba(16, 163, 207, 0.945);
+    border-radius: 20px;
+}
+
+.cv-download-btn{
+    box-shadow: 0 0 10px rgba(16, 163, 207, 0.945);
+    border-radius: 20px;
+
+}
+
+/* services section */
+
+#services{
+    background-color: #000000; /* Dark blue for About */
+    /* box-shadow: 0 0 10px rgba(207, 9, 9, 0.5);
+    border-radius: 20px; */
+    align-items: center;
+}
+#services ul li {
+    display:inline-table; /* Makes the list items inline */
+    background-color: #000000; /* Dark background for the button */
+    color: white; /* White text for contrast */
+    padding: 0.5rem 1rem; /* Adds padding for the button-like appearance */
+    margin: 0.5rem; /* Adds spacing between buttons */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 0 10px rgba(16, 163, 207, 0.945);
+    text-align: center; /* Centers the text inside the button */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#services ul li:hover {
+    background-color: #000000; /* Slightly lighter background on hover */
+}
+
+.hidden {
+    display: none; /* Hides the element */
+}
+
+/* projects sections */
+
+#projects{
+    background-color: #000000; /* Dark blue for About */
+    box-shadow: 0 0 10px rgba(16, 163, 207, 0.945);
+    border-radius: 20px;
+}
+
+/* Contacts */
+
+
+#contact {
+    background-color: #000000; /* Dark blue for About */
+    box-shadow: 0 0 10px rgba(16, 163, 207, 0.945);
+    border-radius: 20px;
+}
+
+#contact ul {
+    list-style: none;
+    display: flex; /* Enables Flexbox for the list */
+    justify-content: center; /* Centers the list items horizontally */
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; /* Allows wrapping of list items */
+    gap: 1rem; /* Adds spacing between list items */
+}
+
+#contact ul li {
+    display: inline-block; /* Makes the list items inline */
+    background-color: #000000; /* Button background color */
+    color: white; /* Button text color */
+    padding: 0.5rem 1rem; /* Adds padding for the button-like appearance */
+    border-radius: 10px; /* Rounds the corners */
+    text-align: center; /* Centers the text inside the button */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#contact ul li:hover {
+    background-color: #000000; /* Slightly lighter background on hover */
+}
+
+
+
+.social-icon {
+    width: 40px; /* Adjust the width of the icons */
+    height: 30px; /* Adjust the height of the icons */
+    margin-right: 0.5rem; /* Adds spacing between the icon and text */
+    vertical-align: middle; /* Aligns the icon with the text */
+    border-radius: 30%;
+    box-shadow: 0 0 10px rgba(16, 163, 207, 0.945);
+    background-color: black;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background-color: black; /* Set black background */
+    color: white; /* Set text color to white for contrast */
+    border: none; /* Remove right and left borders */
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 15px; /* Add rounded corners */
+
+     /* Add subtle shadow for depth */
+    margin: 20px auto; /* Center the form horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the form content */
+    max-width: 500px; /* Limit the form width */
+    box-shadow: 0 0 10px rgba(16, 163, 207, 0.945);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #000000; /* Dark background for inputs */
+    color: white; /* White text for contrast */
+    border: none; /* Remove borders */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(16, 163, 207, 0.945);
+    padding: 10px; /* Add padding */
+    margin-bottom: 15px; /* Add spacing between fields */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add glow effect on focus */
+}
+
+.contact-form button {
+    background-color: #007acc; /* Blue button background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px 20px; /* Add padding */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.contact-form button:hover {
+    background-color: #005f99; /* Darker blue on hover */
+}
+
+footer{
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 2px solid white; /* Adds a border above the footer */
+    border-radius: 10px; /* Rounds the corners of the footer */
+    margin: 0 1rem; /* Adds spacing on the sides */
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Ensure sections stack vertically */
+    }
+
+    .sections {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 1rem; /* Maintain spacing */
+    }
+
+    .profile-container {
+        flex-direction: row; /* Stack items vertically */
+        align-items: center; /* Center align items */
+    }
+
+    nav ul {
+        flex-direction:column; /* Stack navigation links vertically */
+        align-items: center; /* Center align links */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Add vertical spacing between links */
+    }
+
+    .profile-image {
+        width: 250px; /* Reduce image size */
+        height: 250px;
+    }
+
+    .animated-text {
+        font-size: 1.2rem; /* Adjust font size */
+        height: auto; /* Allow height to adjust */
+    }
+
+    #home {
+        padding: 2rem 1rem; /* Reduce padding */
+    }
+
+    #services ul li {
+        padding: 0.5rem; /* Adjust padding for buttons */
+        font-size: 0.9rem; /* Reduce font size */
+    }
+
+    #contact ul {
+        flex-direction: column; /* Stack contact buttons vertically */
+        gap: 0.5rem; /* Adjust spacing */
+        display:block; /* Ensure it is displayed as a block */
+    }
+
+    .contact-form {
+        max-width: 90%; /* Reduce form width */
+        padding: 15px; /* Adjust padding */
+    }
+
+    footer {
+        margin: 0; /* Remove side margins */
+        padding: 0.5rem 0; /* Adjust padding */
+    }
+}
+
+/* Media query for extra small screens */
+@media (max-width: 480px) {
+    .profile-image {
+        width: 100px; /* Further reduce image size */
+        height: 100px;
+    }
+
+    .animated-text {
+        display: block; /* Ensure it is visible */
+        font-size: 1rem; /* Adjust font size for readability */
+        text-align: center; /* Center the text */
+        margin-top: 0.5rem; /* Add spacing */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Reduce spacing between links */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem; /* Adjust input font size */
+    }
+
+    .contact-form button {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 8px 15px; /* Adjust padding */
+    }
+
+    #services ul li {
+        font-size: 0.8rem; /* Further reduce font size */
+        padding: 0.4rem; /* Adjust padding */
+    }
+
+    /* Ensure #home is visible */
+    #home {
+        display: block; /* Ensure the home section is visible */
+        overflow: visible; /* Prevent clipping */
+        height: auto; /* Allow dynamic height */
+    }
+}
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Daniel Chege Njenga - Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <section id="home">
+            <div class="profile-container">
+                <img src="images/profile.jpg" alt="Profile image" class="profile-image">
+                <div class="navigation">
+                    <header>
+                        <nav>
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#education">Education</a></li>
+                                <li><a href="#services">Skills and Services</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="#contact-form">Contact-form</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                </div>
+            </div>   
+            <h2 style="text-align:center">Hello,I'm Daniel Chege</h2>
+            <p style="text-align:center">Welcome to my portfolio</p>
+            <p class="animated-text">
+                <span>Web and Software Developer</span>
+                <span>Tech Enthusiast</span>
+                <span>Code Crafter</span>
+            </p>
+        </section>
+    <div class="sections">
+        <section id="about">
+            <h2 style="text-align:center">About Me</h2>
+            <p>I'm a Software developer and focused on building innovative, user-friendly solutions. My strongest pride comes from building effective solutions that enhance usability and web optimization because of my user interface design expertise and attention to web performance. I have stayed active in technology exploration and work together with others to implement creative concepts.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <p>Computer studies became a special subject for me in high school and hence my initial passion in Information technology. I have expanded my skills since then by specializing in web technologies and software development to reach expert competency in tech industries.<br> I pursued a Degree course in Community Health and Development from 2016 to 2020. Although my academic background is in health and development, my passion for technology and innovation has driven me to explore and build a career in Information Technology, blending both fields to create impactful solutions.</p>
+            <button class="cv-download-btn" onclick="downloadCV()">Download my CV</button>   
+        </section>
+    </div>
+
+        <section id="services">
+            <h2 style="text-align:center">Skills and Services</h2>
+        <p style="text-align:center">Click the buttons for more info</p>
+        <ul>
+            <li>
+                <button onclick="toggleInfo('Web-info')">Web Development</button>
+                <p id="Web-info" class="hidden"style="text-align:left" >Custom website designs<br><br>Responsive web designs(mobile/tablet friendly)<br><br>Landing pages and business websites.<br><br>Personal portfolio sites.</p>
+            </li>
+            <li>
+                <button onclick="toggleInfo('frontend-info')">Frontend Development</button>
+                <p id="frontend-info" class="hidden" style="text-align:left">UI/UX implementation using HTML,CSS,Javascript.<br>Frameworks like React,Vue,Angular.<br>Animation and interactivity enhancements.</p>
+            </li>
+            <li>
+                <button onclick="toggleInfo('backend-info')">Backend Development</button>
+                <p id="backend-info" class="hidden" style="text-align:left">RESTul API creation and intergration.<br>Database design and management(MySQL,MongoDB).<br>Authentication systems(login, registration,etc.)</p>
+            </li>
+            <li>
+                <button onclick="toggleInfo('maintenance-info')">Maintenance and Support</button>
+                <p id="maintenance-info" class="hidden"style="text-align:left" >Bug fixing and troubleshooting.<br>Website updates.<br>Performance optimization.</p>
+            </li>
+            <li>
+                <button onclick="toggleInfo('consultation-info')">Consultation and Planning</button>
+                <p id="consultation-info" class="hidden" style="text-align:left">Technical consultation for startups or projects.<br>Project documentation and roadmaps.</p>
+            </li>
+         </ul>
+        </section>
+    <div class="sections">
+        <section id="projects">
+            <h2 style="text-align:center">Projects</h2>
+            <p style="text-align:center">Here are some of the projects I have worked on:</p>
+            <ul style="color: rgb(255, 255, 255); font-weight: bold;">
+                <li><a href=https://github.com/danchege/portfolio.git>Portfolio Website</a>-A personal portfolio website in HTML and CSS.</li>
+                <li><a href=https://github.com/danchege/portfolio.git>Portfolio Website</a>-A personal portfolio website in HTML and CSS.</li>
+                <li><a href=https://github.com/danchege/portfolio.git>Portfolio Website</a>-A personal portfolio website in HTML and CSS.</li>
+           
+            </ul>
+        </section>
+    
+         <section id="contact">
+                <h2 style="text-align:center">Contact Me</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/dan.chege.njenga" target="_blank"><img src="images/facebook.png" alt="Facebook" class="social-icon"> Facebook</a></li>
+                    <li><a href="https://github.com/danchege" target="_blank"><img src="images/github.png" alt="Github" class="social-icon"> Git hub</a></li>
+                    <li><a href="https://wa.me/+254713332171" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp" class="social-icon"> WhatsApp</a></li>
+                    <li><a href="mailto:danychege28@gmail.com" target="_blank"><img src="images/email.png" alt="Email" class="social-icon"> Email</a></li>
+                </ul>
+            </section>
+     </div>  
+            <section id="contact-form">
+                <p style="text-align:center">Send a quick message</p>
+                <form class="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Send</button>
+                </form>
+                <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+            </section>
+
+            </section>
+            <footer style="text-align:center">
+                <p>&copy; 2025 Daniel Chege. All rights reserved.</p>
+            </footer>
+    </body>
+</html>
