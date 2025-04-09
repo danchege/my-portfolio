@@ -8,6 +8,10 @@ body {
     display: flex;
     flex-direction: column; /* Stack sections vertically */
     min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    background-image: url("images/sample\ 6.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 section {
@@ -38,7 +42,7 @@ section {
 }
 
 header {
-    background-color: #000000;
+    background-color: none;
     padding: 1rem 0;
     border-bottom: 2px solid white; /* Adds a border below the navigation bar */
     border-radius: 10px; /* Rounds the corners of the navigation bar */
@@ -69,6 +73,8 @@ nav ul li a {
     padding: 3rem 2rem;
     color: white;
     border: none;
+    
+    
 }
 
 .profile-image {
@@ -131,18 +137,20 @@ nav ul li a {
 }
 
 #about {
-    background-color: #000000; /* Dark blue for About */
+    background-color: none; /* Dark blue for About */
     box-shadow: 0 0 10px rgba(16, 163, 207, 0.945);
-    border-radius: 20px;
+    border-radius: 90px;
 
 }
 
 /* education section */
 
 #education{
-    border: #000000;
+    border: black;
     box-shadow: 0 0 10px rgba(16, 163, 207, 0.945);
-    border-radius: 20px;
+    border-radius: 90px;
+    color: rgb(255, 255, 255);
+    background-color: none;
 }
 
 .cv-download-btn{
@@ -154,7 +162,7 @@ nav ul li a {
 /* services section */
 
 #services{
-    background-color: #000000; /* Dark blue for About */
+    background-color: none; /* Dark blue for About */
     /* box-shadow: 0 0 10px rgba(207, 9, 9, 0.5);
     border-radius: 20px; */
     align-items: center;
@@ -183,18 +191,18 @@ nav ul li a {
 /* projects sections */
 
 #projects{
-    background-color: #000000; /* Dark blue for About */
+    background-color: none; /* Dark blue for About */
     box-shadow: 0 0 10px rgba(16, 163, 207, 0.945);
-    border-radius: 20px;
+    border-radius: 90px;
 }
 
 /* Contacts */
 
 
 #contact {
-    background-color: #000000; /* Dark blue for About */
+    background-color: none; /* Dark blue for About */
     box-shadow: 0 0 10px rgba(16, 163, 207, 0.945);
-    border-radius: 20px;
+    border-radius: 90px;
 }
 
 #contact ul {
@@ -214,6 +222,7 @@ nav ul li a {
     padding: 0.5rem 1rem; /* Adds padding for the button-like appearance */
     border-radius: 10px; /* Rounds the corners */
     text-align: center; /* Centers the text inside the button */
+    box-shadow: 0 0 10px rgba(16, 163, 207, 0.945);
     cursor: pointer; /* Changes the cursor to a pointer on hover */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
@@ -236,7 +245,7 @@ nav ul li a {
 
 /* Contact Form Styles */
 .contact-form {
-    background-color: black; /* Set black background */
+    background-color: none; /* Set black background */
     color: white; /* Set text color to white for contrast */
     border: none; /* Remove right and left borders */
     padding: 20px; /* Add padding for better spacing */
@@ -255,7 +264,7 @@ nav ul li a {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #333;
+    color: #dbd8d8;
 }
 
 .contact-form input,
