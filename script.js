@@ -1,3 +1,5 @@
+import emailjs from 'emailjs-com';
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -67,6 +69,30 @@ document.querySelector('.contact-form').addEventListener('submit', function (e) 
     }
 
     alert('Your message has been sent successfully!');
+});
+
+// Initialize EmailJS
+emailjs.init("-qO9nsFXC7nNbxi74"); // Replace with your Public Key
+
+// Handle form submission
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const formData = {
+        from_name: document.getElementById("name").value,
+        from_email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+    };
+
+    emailjs.send("service_jwceu8t", "template_ycqpqm9", formData)
+        .then(response => {
+            console.log("SUCCESS!", response);
+            alert("Message sent successfully!");
+        })
+        .catch(error => {
+            console.error("FAILED...", error);
+            alert("Failed to send message. Please try again.");
+        });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
