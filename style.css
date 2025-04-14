@@ -395,7 +395,7 @@ footer{
     #contact ul {
         flex-direction: column; /* Stack contact buttons vertically */
         gap: 0.5rem; /* Adjust spacing */
-        display: block; /* Ensure it is displayed as a block */
+        display: flex; /* Ensure it is displayed as a block */
         text-align: center; /* Center-align contact items */
     }
 
