@@ -10,7 +10,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
         if (targetElement) {
             window.scrollTo({
                 top: targetElement.offsetTop,
-                behavior: 'smooth'
+                behavior: 'smooth',
             });
         }
     });
@@ -18,26 +18,18 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
 
 // Fade-in effect for sections
 const sections = document.querySelectorAll('section');
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, { threshold: 0.1 });
+const observer = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    },
+    { threshold: 0.1 }
+);
 
-sections.forEach(section => {
-    observer.observe(section);
-});
-
-function toggleInfo(id) {
-    const element = document.getElementById(id);
-    if (element.classList.contains('hidden')) {
-        element.classList.remove('hidden'); // Show the element
-    } else {
-        element.classList.add('hidden'); // Hide the element
-    }
-}
+sections.forEach(section => observer.observe(section));
 
 // CV download function
 function downloadCV() {
@@ -72,36 +64,38 @@ document.querySelector('.contact-form').addEventListener('submit', function (e) 
 });
 
 // Initialize EmailJS
-emailjs.init("-qO9nsFXC7nNbxi74"); // Replace with your Public Key
+emailjs.init('-qO9nsFXC7nNbxi74'); // Replace with your Public Key
 
 // Handle form submission
-document.getElementById("contactForm").addEventListener("submit", function(event) {
+document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
     const formData = {
-        from_name: document.getElementById("name").value,
-        from_email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
+        from_name: document.getElementById('name').value,
+        from_email: document.getElementById('email').value,
+        message: document.getElementById('message').value,
     };
 
-    emailjs.send("service_jwceu8t", "template_ycqpqm9", formData)
+    emailjs
+        .send('service_jwceu8t', 'template_ycqpqm9', formData)
         .then(response => {
-            console.log("SUCCESS!", response);
-            alert("Message sent successfully!");
+            console.log('SUCCESS!', response);
+            alert('Message sent successfully!');
         })
         .catch(error => {
-            console.error("FAILED...", error);
-            alert("Failed to send message. Please try again.");
+            console.error('FAILED...', error);
+            alert('Failed to send message. Please try again.');
         });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const animatedText = document.querySelectorAll(".animated-text span");
+// Animated text functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedText = document.querySelectorAll('.animated-text span');
     let index = 0;
 
     function showNextText() {
         animatedText.forEach((span, i) => {
-            span.style.display = i === index ? "inline" : "none";
+            span.style.display = i === index ? 'inline' : 'none';
         });
         index = (index + 1) % animatedText.length;
     }

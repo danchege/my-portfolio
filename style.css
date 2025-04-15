@@ -166,25 +166,50 @@ nav ul li a {
     align-items: center;
 }
 
-/* Center the services list */
+/* Services section */
 #services ul {
     display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: center; /* Center items horizontally */
+    align-items: flex-start; /* Align items at the top */
     padding: 0; /* Remove padding */
     margin: 0 auto; /* Center the list */
     list-style: none; /* Remove bullet points */
+    gap: 2rem; /* Add spacing between items */
 }
 
-/* Style individual buttons */
+/* Style individual service items */
 #services ul li {
-    margin: 10px 0; /* Add spacing between buttons */
     text-align: center; /* Center-align the text */
+    max-width: 300px; /* Limit the width of each service */
 }
 
-.hidden {
-    display: none; /* Hides the element */
+/* Style the service descriptions */
+#services ul li p {
+    margin-top: 1rem; /* Add spacing between button and content */
+    color: #ddd; /* Light text color */
+    font-size: 14px; /* Smaller font size */
+    line-height: 1.5; /* Line height for readability */
+    text-align: left; /* Align text to the left */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    #services ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 1rem; /* Reduce spacing between items */
+    }
+
+    #services ul li {
+        max-width: 100%; /* Allow items to take full width */
+        text-align: center; /* Center-align the text */
+    }
+
+    #services ul li p {
+        text-align: center; /* Center-align the descriptions */
+        font-size: 16px; /* Slightly larger font for readability */
+    }
 }
 
 /* projects sections */
@@ -395,7 +420,7 @@ footer{
     #contact ul {
         flex-direction: column; /* Stack contact buttons vertically */
         gap: 0.5rem; /* Adjust spacing */
-        display: flex; /* Ensure it is displayed as a block */
+        display: contents; /* Ensure it is displayed as a block */
         text-align: center; /* Center-align contact items */
     }
 
